@@ -21,6 +21,24 @@ a:focus-visible,button:focus-visible{outline:2px solid #7B1E3A;outline-offset:3p
 button{cursor:pointer}
 </style>
 <style>[hidden]{display:none!important}.pill{min-height:44px;padding:0 22px;border-radius:999px;border:2px solid #7B1E3A;font-family:Manrope,system-ui,sans-serif;font-size:15px;font-weight:700;background:transparent;color:#7B1E3A;cursor:pointer}.pill[aria-pressed=true]{background:#7B1E3A;color:#F4ECDA}</style>
+<style>#lb{position:fixed;inset:0;background:rgba(43,13,23,.94);display:none;overflow:auto;z-index:50;-webkit-overflow-scrolling:touch}#lb.on{display:block}#lb img{display:block;width:max(100%,900px);height:auto;margin:0 auto;background:#fff}#lb button{position:fixed;top:12px;right:12px;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:#F4ECDA;color:#7B1E3A;font:700 15px Manrope,system-ui,sans-serif;cursor:pointer;z-index:51}#case-3 figure img{cursor:zoom-in}</style>
+<style id="mobile">
+@media (max-width: 700px){
+body{overflow-x:hidden}
+[style*="max-width: 1200px"]{padding-left:20px !important;padding-right:20px !important}
+[style*="padding: 36px"]{padding:24px !important}
+[style*="padding: 48px"]{padding:28px 20px !important}
+[style*="padding: 32px 36px"],[style*="padding: 28px 32px"]{padding:22px 20px !important}
+[style*="width: 360px"],[style*="width: 380px"]{width:100% !important;max-width:320px !important}
+[style*="flex: 1 1 340px"],[style*="flex: 1 1 320px"]{min-width:0 !important;flex-basis:100% !important}
+form[aria-label]{grid-template-columns:1fr !important;padding:28px 20px !important}
+form [style*="grid-column"]{grid-column:auto !important}
+section[aria-label="Credenciais"] span[aria-hidden]{display:none}
+nav a{padding:8px 2px;display:inline-block}
+[style*="repeat(2, minmax(0, 1fr))"]{grid-template-columns:1fr !important}
+[style*="repeat(2, minmax(0, 1fr))"] > span + span{border-left:0 !important;border-top:1px dashed #D9C9B3}
+}
+</style>
 </head>
 <body>
 <a href="#conteudo" style="position:absolute;left:-9999px" onfocus="this.style.left='8px';this.style.top='8px'" onblur="this.style.left='-9999px'">Ir para o conteúdo</a>
@@ -134,24 +152,37 @@ button{cursor:pointer}
 <div style="display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-end; justify-content: space-between">
 <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <span style="align-self: flex-start; background: #F4ECDA; color: #4C5638; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px">Educação · Correção de redações</span>
-<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05">Correção técnica de redações Enem e UERJ, competência por competência</h2>
-<p style="margin: 0; max-width: 720px">Corrijo pelos critérios oficiais de cada exame, em plataformas de correção. O feedback abre com o que o texto já faz bem e, em seguida, aponta os problemas com o trecho, a troca sugerida e um caminho prático para a próxima redação.</p>
+<h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.05">Correção de redações do 6º ano ao Enem e à UERJ, com feedback que o aluno consegue usar</h2>
+<p style="margin: 0; max-width: 720px">Corrijo pelos critérios de cada exame ou da escola, em plataformas de correção. O feedback abre com o que o texto já faz bem e, em seguida, aponta os problemas com o trecho, a troca sugerida e um caminho prático para a próxima redação.</p>
 </div>
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 4px">
 <span style="font-family: Gloock, Didot, Georgia, serif; font-size: 80px; line-height: 1">~300</span>
 <span>redações corrigidas por mês</span>
 </div>
 </div>
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Exemplo 1 · Ensino Médio, modelo Enem</p>
 <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
 <figure style="flex: 1 1 380px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
 <img src="assets/redacao-corrigida.webp" width="832" height="812" loading="lazy" alt="Redação manuscrita sobre automedicação, com as marcações de correção por competência" style="width: 100%; height: auto; display: block; border-radius: 14px; border: 8px solid #FFFFFF; box-sizing: border-box; background: #FFFFFF">
-<figcaption style="font-size: 14px">Redação modelo Enem sobre automedicação e saúde pública, com as marcações por competência.</figcaption>
+<figcaption style="font-size: 14px">Redação modelo Enem sobre automedicação e saúde pública, com as marcações por competência. Toque na imagem para ampliar.</figcaption>
 </figure>
 <div style="flex: 1 1 420px; min-width: 0; background: #F4ECDA; color: #2B0D17; border-radius: 18px; padding: 32px 36px; display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 1.6">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4C5638">O feedback que escrevi</p>
 <p style="margin: 0">[Nome do aluno], você abriu o texto com o SUS e a facilidade de acesso a medicamentos, o que mostra que você enxergou o ponto de partida do problema. Também usou a novela "Três Graças" e a série "Teen Wolf" como repertório e organizou o texto em quatro parágrafos, com conectivos variados, como "Entretanto", "Nesse viés", "Além disso" e "De forma análoga".</p>
 <p style="margin: 0">Por outro lado, o texto se afasta do tema. O foco são os impactos da automedicação na saúde pública, mas o terceiro parágrafo trata da perda de laços afetivos e das famílias, e a ligação com o SUS fica sem explicação. A frase "gerando desentendimentos maternais" não tem sustentação, pois o texto não mostra por que a automedicação de idosos causaria conflitos entre mães e filhos. O repertório de "Teen Wolf" parece forçado, porque a perda de sanidade do personagem não se relaciona de forma clara com a automedicação. Use o Texto I, que cita o risco de dependência física e psicológica com ansiolíticos e opioides, para sustentar o argumento sobre os idosos, e mostre o efeito no sistema público, como internações por intoxicação e a sobrecarga dos hospitais. Em "O uso decorrente de comprovante médico reverterá a situação atual", falta explicar como o comprovante resolve o problema. Algumas frases também ficaram sem sentido completo.</p>
 <p style="margin: 0">Alguns conectivos precisam de troca. Troque "Assim," por "Dessa forma,", "Logo," no terceiro parágrafo por "Dessa forma," e "Por consequência," por "Com isso,", pois nenhum deles introduz uma conclusão lógica. As palavras "perda", "afetivos", "remédios" e "público" se repetem e podem ser trocadas.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Exemplo 2 · 6º ano do Ensino Fundamental</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+<figure style="flex: 1 1 380px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
+<img src="assets/redacao-6ano.webp" width="577" height="662" loading="lazy" alt="Redação manuscrita de aluna do 6º ano, com as marcações de correção" style="width: 100%; height: auto; display: block; border-radius: 14px; border: 8px solid #FFFFFF; box-sizing: border-box; background: #FFFFFF">
+<figcaption style="font-size: 14px">Redação do 6º ano com as marcações de correção. Toque na imagem para ampliar.</figcaption>
+</figure>
+<div style="flex: 1 1 420px; min-width: 0; background: #F4ECDA; color: #2B0D17; border-radius: 18px; padding: 32px 36px; display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 1.6">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4C5638">O feedback que escrevi</p>
+<p style="margin: 0">[Nome da aluna], sua redação foi muito bem construída: você pegou o personagem Gui e criou um conflito duplo muito interessante — o crescimento físico que ele não queria e a pressão para mudar de amigos e "se encaixar". O desfecho, mostrando que ele amadureceu e aprendeu a ter amigos sem precisar fingir ser quem não é, é uma reflexão bem madura sobre o tema. Parabéns pela originalidade!</p>
+<p style="margin: 0">Por outro lado, o texto muda de tempo verbal várias vezes sem motivo, misturando presente e passado na mesma história. Por exemplo: "mora um homem" deveria ser "morava um homem"; "ele é muito triste" deveria ser "ele era muito triste"; "ele só tem 13 anos" deveria ser "ele só tinha 13 anos"; "os amigos chamam ele de girafa" deveria ser "os amigos chamavam ele de girafa"; e "seus amigos gostam de brincar... Gui gosta de ficar no celular" deveria ser "seus amigos gostavam... Gui gostava". Como você contou a história como algo que já aconteceu, o ideal é manter tudo no passado do início ao fim, sem pular para o presente no meio do texto.</p>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; border-top: 1px solid #F4ECDA; padding-top: 28px">
@@ -356,6 +387,15 @@ button{cursor:pointer}
 function set(f){e.hidden=!(f==='todos'||f==='edu');m.hidden=!(f==='todos'||f==='mkt');b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.filtro===f?'true':'false')})}
 b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.filtro)})});
 if(location.hash){var t=document.querySelector(location.hash);if(t)t.scrollIntoView()}})();
+</script>
+<script>
+(function(){var lb=document.createElement('div');lb.id='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','Imagem ampliada');lb.innerHTML='<button type="button">Fechar</button><img alt="">';document.body.appendChild(lb);
+var im=lb.querySelector('img'),bt=lb.querySelector('button');
+function close(){lb.classList.remove('on');document.body.style.overflow=''}
+document.querySelectorAll('#case-3 figure img').forEach(function(x){x.tabIndex=0;x.setAttribute('role','button');
+function open(){im.src=x.src;im.alt=x.alt;lb.scrollTop=0;lb.classList.add('on');document.body.style.overflow='hidden';bt.focus()}
+x.addEventListener('click',open);x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
+bt.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});})();
 </script>
 </body>
 </html>

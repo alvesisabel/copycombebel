@@ -20,6 +20,23 @@ a{color:#7B1E3A}a:hover{color:#2B0D17}
 a:focus-visible,button:focus-visible{outline:2px solid #7B1E3A;outline-offset:3px}
 </style>
 
+<style id="mobile">
+@media (max-width: 700px){
+body{overflow-x:hidden}
+[style*="max-width: 1200px"]{padding-left:20px !important;padding-right:20px !important}
+[style*="padding: 36px"]{padding:24px !important}
+[style*="padding: 48px"]{padding:28px 20px !important}
+[style*="padding: 32px 36px"],[style*="padding: 28px 32px"]{padding:22px 20px !important}
+[style*="width: 360px"],[style*="width: 380px"]{width:100% !important;max-width:320px !important}
+[style*="flex: 1 1 340px"],[style*="flex: 1 1 320px"]{min-width:0 !important;flex-basis:100% !important}
+form[aria-label]{grid-template-columns:1fr !important;padding:28px 20px !important}
+form [style*="grid-column"]{grid-column:auto !important}
+section[aria-label="Credenciais"] span[aria-hidden]{display:none}
+nav a{padding:8px 2px;display:inline-block}
+[style*="repeat(2, minmax(0, 1fr))"]{grid-template-columns:1fr !important}
+[style*="repeat(2, minmax(0, 1fr))"] > span + span{border-left:0 !important;border-top:1px dashed #D9C9B3}
+}
+</style>
 </head>
 <body>
 <a href="#conteudo" style="position:absolute;left:-9999px" onfocus="this.style.left='8px';this.style.top='8px'" onblur="this.style.left='-9999px'">Ir para o conteúdo</a>
@@ -92,7 +109,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #7B1E3A;outline-offset:3p
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
 <li style="padding: 18px 0; border-top: 1px solid #D9C9B3">Avaliadora de redações Enem e UERJ em plataformas de correção, com cerca de 300 redações por mês</li>
 <li style="padding: 18px 0; border-top: 1px solid #D9C9B3">Estágio de docência no Instituto de Aplicação da UERJ</li>
-<li>Materiais didáticos do 6º ano ao 3º ano do Ensino Médio</li>
+<li style="padding: 18px 0; border-top: 1px solid #D9C9B3">Materiais didáticos do 6º ano ao 3º ano do Ensino Médio</li>
 <li style="padding: 18px 0; border-top: 1px solid #D9C9B3">Revisora textual freelancer de TCCs, artigos e dissertações em ABNT</li>
 <li style="padding: 18px 0; border-top: 1px solid #D9C9B3">Pesquisa acadêmica e revisão textual em laboratórios da UERJ</li>
 <li style="padding: 18px 0; border-top: 1px solid #D9C9B3; border-bottom: 1px solid #D9C9B3">Residência pedagógica (CAPES/UERJ)</li>
