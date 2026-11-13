@@ -11,6 +11,7 @@
 <meta property="og:title" content="Isabel Alves Lima (Bebel) · Copywriter, revisora e corretora de redações">
 <meta property="og:description" content="Copywriting, revisão de textos e correção de redações para marcas e instituições. Portfólio de Isabel Alves Lima, a Bebel.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%237B1E3A'/%3E%3Cpath d='M12 3C12.6 8 14 9.6 19 12C14 14.4 12.6 16 12 21C11.4 16 10 14.4 5 12C10 9.6 11.4 8 12 3Z' fill='%23F4B8C5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://www.instagram.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
@@ -147,8 +148,9 @@ nav a{padding:8px 2px;display:inline-block}
 <p style="margin: 0; font-size: 14px; color: #6B4A52; max-width: 420px">Os posts são carregados do Instagram, que pode registrar a sua visita.</p>
 </div>
 <script>
-(function(){var s=document.getElementById('instagram'),done=false;function load(){if(done)return;done=true;var e=document.createElement('script');e.src='https://www.instagram.com/embed.js';e.async=true;e.onload=function(){if(window.instgrm)window.instgrm.Embeds.process()};document.body.appendChild(e)}
-if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){load();o.disconnect()}},{rootMargin:'400px'}).observe(s)}else{load()}})();
+(function(){var done=false;function load(){if(done)return;done=true;var e=document.createElement('script');e.src='https://www.instagram.com/embed.js';e.async=true;e.onload=function(){if(window.instgrm)window.instgrm.Embeds.process()};document.body.appendChild(e)}
+function later(){if('requestIdleCallback' in window){requestIdleCallback(load,{timeout:3000})}else{setTimeout(load,1500)}}
+if(document.readyState==='complete'){later()}else{window.addEventListener('load',later)}})();
 </script>
 </section>
 
