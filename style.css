@@ -153,11 +153,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
   position:relative;
 }
 .topo::after{content:"";position:absolute;left:var(--pad);right:var(--pad);bottom:0;border-bottom:3px solid var(--line)}
-.logo{
-  font-family:var(--titulo);font-weight:600;font-size:1.7rem;line-height:1;
-  text-decoration:none;color:var(--preto-fundo);letter-spacing:-.01em;
-}
-.logo em{font-style:italic;font-weight:600}
 .menu{display:flex;flex-wrap:wrap;gap:6px 26px}
 .menu a{
   font-family:var(--selo);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
@@ -350,7 +345,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
 .rodape{border-bottom:0}
 .rodape .wrap{padding-top:clamp(40px,6vw,72px);padding-bottom:36px}
 .rodape .nome{grid-column:1 / span 5}
-.rodape .nome .logo{color:var(--rosa);font-size:2.4rem}
 .rodape .nome p{margin-top:14px;color:var(--papel);max-width:24em}
 .rodape .col{grid-column:7 / span 3}
 .rodape .col h3{
@@ -607,3 +601,18 @@ body,p,li,dd,label,input,select,textarea{font-family:'Space Grotesk',sans-serif}
 .contato__lado p,.canais a,.canais strong{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.01em}
 .contato__lado p{font-weight:700}
 .canais span{font-weight:700}
+
+/* ---------- Logo: composição híbrida delicada ---------- */
+.brand-logo,.rodape .brand-logo{
+  display:inline-flex;align-items:baseline;text-decoration:none;
+  color:#121112;text-transform:lowercase;white-space:nowrap;
+}
+.logo-prefix{
+  font-family:'Space Grotesk',sans-serif;font-weight:400;
+  font-size:1.25rem;letter-spacing:.04em;text-transform:lowercase;
+}
+.logo-accent{
+  font-family:'Unbounded',sans-serif;font-weight:400;
+  font-size:1.25rem;letter-spacing:.01em;text-transform:lowercase;margin-left:.35rem;
+}
+.rodape .brand-logo{color:#FFF8EC}
