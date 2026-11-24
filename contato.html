@@ -10,9 +10,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#FB0A8C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FB0A8C'/%3E%3Ctext x='32' y='46' font-size='40' font-family='serif' font-weight='700' text-anchor='middle' fill='%23F0EB1D'%3Eb%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#FB0A8C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..800&family=Space+Grotesk:wght@400..700&family=Unbounded:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,26 +25,28 @@
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <!-- 1 · Clássica -->
-<header class="sec sec--classica">
+<header class="sec sec--classica sec--topo">
   <div class="topo">
     <a class="logo" href="index.html" aria-label="copy com Bebel, página inicial">copy <em>com</em> Bebel</a>
     <nav class="menu" aria-label="Principal">
-      <a href="index.html#servicos">Serviços</a>
+      <a href="servicos.html">Serviços</a>
       <a href="cases.html">Cases</a>
-      <a href="index.html#sobre">Sobre</a>
+      <a href="sobre.html">Sobre</a>
       <a href="contato.html" aria-current="page">Contato</a>
     </nav>
   </div>
-
-  <div class="hero-int" id="conteudo">
-    <svg class="deco deco--hero-int" viewBox="0 0 89.94 72.95" aria-hidden="true" focusable="false"><use href="#coracao"/></svg>
-    <p class="kicker">Contato</p>
-    <h1 class="display">Vamos falar sobre <span class="mark">o seu texto?</span></h1>
-    <p class="sub">Me conte o que você precisa, para quem é e qual o prazo. Quanto mais contexto, mais precisa fica a proposta. Respondo por e-mail.</p>
-  </div>
 </header>
 
-<main>
+<main id="conteudo" tabindex="-1">
+<section class="sec sec--classica sec--hero">
+  <div class="hero-int">
+    <svg class="deco deco--hero-int" viewBox="0 0 89.94 72.95" aria-hidden="true" focusable="false"><use href="#coracao"/></svg>
+    <p class="kicker">Contato</p>
+    <h1 class="display">Vamos falar sobre <span class="mark">o&nbsp;seu&nbsp;texto?</span></h1>
+    <p class="sub">Me conte o que você precisa, para quem é e qual o prazo. Quanto mais contexto, mais precisa fica a proposta. Respondo por e-mail.</p>
+  </div>
+</section>
+
 <!-- 2 · Suave: formulário -->
 <section class="sec sec--suave" aria-labelledby="t-form">
   <div class="wrap grid">
@@ -115,9 +119,9 @@
     <div class="col">
       <h3>Navegar</h3>
       <ul>
-        <li><a href="index.html#servicos">Serviços</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
         <li><a href="cases.html">Cases</a></li>
-        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </div>

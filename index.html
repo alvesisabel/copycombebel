@@ -11,9 +11,11 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#FB0A8C">
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FB0A8C'/%3E%3Ctext x='32' y='46' font-size='40' font-family='serif' font-weight='700' text-anchor='middle' fill='%23F0EB1D'%3Eb%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#FB0A8C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..800&family=Space+Grotesk:wght@400..700&family=Unbounded:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@400..800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -26,18 +28,21 @@
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
 <!-- =============== 1 · HERO · Seção Clássica =============== -->
-<header class="sec sec--classica">
+<header class="sec sec--classica sec--topo">
   <div class="topo">
     <a class="logo" href="index.html" aria-label="copy com Bebel, página inicial">copy <em>com</em> Bebel</a>
     <nav class="menu" aria-label="Principal">
-      <a href="#servicos">Serviços</a>
+      <a href="servicos.html">Serviços</a>
       <a href="#cases">Cases</a>
-      <a href="#sobre">Sobre</a>
+      <a href="sobre.html">Sobre</a>
       <a href="contato.html">Contato</a>
     </nav>
   </div>
+</header>
 
-  <div class="hero grid" id="conteudo">
+<main id="conteudo" tabindex="-1">
+<section class="sec sec--classica sec--hero">
+  <div class="hero grid">
     <span class="ht ht--preto ht-a" aria-hidden="true"></span>
 
     <div class="hero__texto">
@@ -68,9 +73,8 @@
       <li><strong>SEO e Marketing</strong>Santander Open Academy</li>
     </ul>
   </div>
-</header>
+</section>
 
-<main>
 
 <!-- =============== 2 · SERVIÇOS · Seção Suave =============== -->
 <section class="sec sec--suave" id="servicos" aria-labelledby="t-servicos">
@@ -178,8 +182,10 @@
   <div class="wrap grid">
     <div class="esq">
       <span class="tag">Instagram</span>
-      <p class="arroba">@copycombebel</p>
-      <svg class="deco deco--insta" viewBox="0 0 89.94 72.95" aria-hidden="true" focusable="false"><use href="#coracao"/></svg>
+      <div class="arroba-bloco">
+        <p class="arroba">@copycombebel</p>
+        <svg class="deco deco--insta" viewBox="0 0 89.94 72.95" aria-hidden="true" focusable="false"><use href="#coracao"/></svg>
+      </div>
     </div>
     <div class="dir">
       <h2 class="display" id="t-insta">Copy, revisão e redação no dia a dia.</h2>
@@ -216,9 +222,9 @@
     <div class="col">
       <h3>Navegar</h3>
       <ul>
-        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
         <li><a href="#cases">Cases</a></li>
-        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </div>
