@@ -135,7 +135,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
 .deco--hero{z-index:3;width:clamp(64px,8vw,104px);left:-34px;top:-40px;color:var(--preto-fundo)}
 .deco--servicos{width:clamp(96px,11vw,150px);right:clamp(24px,7vw,110px);top:clamp(56px,8vw,110px);color:var(--rosa-800);filter:drop-shadow(6px 6px 0 var(--preto))}
 .deco--cases{width:clamp(90px,10vw,140px);right:clamp(24px,7vw,110px);top:clamp(52px,7vw,96px);color:var(--amarelo);filter:drop-shadow(6px 6px 0 var(--amarelo-sombra))}
-.deco--insta{position:static;width:clamp(72px,8vw,110px);margin-top:28px;color:var(--amarelo);filter:drop-shadow(6px 6px 0 var(--preto))}
+.arroba-bloco{display:inline-flex;flex-direction:column;align-items:center;gap:22px}
+.deco--insta{position:static;display:block;width:clamp(64px,6vw,96px);color:var(--amarelo);filter:drop-shadow(5px 5px 0 var(--preto))}
 .deco--chamada{width:clamp(90px,10vw,140px);right:clamp(24px,5vw,80px);bottom:clamp(24px,4vw,56px);color:var(--rosa);filter:drop-shadow(6px 6px 0 var(--rosa-800))}
 @media (max-width:960px){
   .deco--servicos,.deco--cases,.deco--chamada{display:none}
@@ -149,8 +150,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
   gap:14px 32px;
   max-width:var(--max);margin:0 auto;padding:22px var(--pad);
-  border-bottom:3px solid var(--line);
+  position:relative;
 }
+.topo::after{content:"";position:absolute;left:var(--pad);right:var(--pad);bottom:0;border-bottom:3px solid var(--line)}
 .logo{
   font-family:var(--titulo);font-weight:600;font-variation-settings:"opsz" 11;font-size:1.7rem;line-height:1;
   text-decoration:none;color:var(--preto-fundo);letter-spacing:-.01em;
@@ -164,7 +166,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
 }
 .menu a:hover{border-bottom-color:var(--preto-fundo)}
 
-.hero{max-width:var(--max);margin:0 auto;padding:clamp(40px,7vw,96px) var(--pad) clamp(48px,7vw,88px);position:relative}
+.hero{max-width:var(--max);margin:0 auto;padding:clamp(40px,7vw,96px) var(--pad) clamp(36px,5vw,56px);position:relative}
 .hero__texto{grid-column:1 / span 7;position:relative;z-index:2}
 .hero__foto{grid-column:9 / span 4;position:relative;align-self:start;margin-top:0}
 
@@ -218,15 +220,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
   position:relative;z-index:2;
 }
 .fatos ul{
-  max-width:var(--max);margin:0 auto;
+  max-width:var(--max);margin:0 auto;padding:0 var(--pad);
   display:grid;grid-template-columns:repeat(4,1fr);
 }
 .fatos li{
-  padding:20px var(--pad) 22px;
+  padding:20px 24px 22px;
   border-right:3px solid var(--line);
   font-size:.95rem;line-height:1.35;
 }
-.fatos li:first-child{padding-left:var(--pad)}
+.fatos li:first-child{padding-left:0}
 .fatos li:last-child{border-right:0}
 .fatos strong{display:block;font-family:var(--selo);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
 
@@ -312,7 +314,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
    5 · INSTAGRAM (Clássica)
    ========================================================= */
 #instagram .wrap{padding-top:clamp(48px,7vw,88px);padding-bottom:clamp(48px,7vw,88px)}
-#instagram .esq{grid-column:1 / span 7}
+#instagram .esq{grid-column:1 / span 7;display:flex;flex-direction:column;align-items:flex-start}
 #instagram .dir{grid-column:8 / span 5;align-self:start}
 #instagram .tag{margin-bottom:24px}
 #instagram .arroba{
@@ -472,7 +474,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus,var(--preto-f
   .cases-grid .case,.cases-grid .case.w7,.cases-grid .case.w5{grid-column:1 / -1}
   .contato__lado,.contato__form{grid-column:1 / -1}
 }
-.deco--hero-int{right:clamp(24px,8vw,140px);top:clamp(32px,6vw,72px);width:clamp(90px,12vw,170px);color:var(--amarelo);filter:drop-shadow(6px 6px 0 var(--preto))}
+.deco--hero-int{right:clamp(24px,8vw,140px);bottom:clamp(36px,5vw,72px);width:clamp(90px,11vw,150px);color:var(--amarelo);filter:drop-shadow(6px 6px 0 var(--preto))}
 @media (max-width:960px){.deco--hero-int{display:none}}
 
 /* =========================================================
