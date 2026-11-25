@@ -611,3 +611,157 @@ body,p,li,dd,label,input,select,textarea{font-family:'Space Grotesk',sans-serif}
   font-size:1.25rem;letter-spacing:.01em;text-transform:lowercase;margin-left:.35rem;
 }
 .rodape .brand-logo{color:#FFF8EC}
+
+/* =========================================================
+   EXTRAS · microinterações, WhatsApp, copiar e-mail, gatinho
+   Só cores da paleta, sombras chapadas, sem blur.
+   Todo movimento fica dentro de prefers-reduced-motion: no-preference.
+   ========================================================= */
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Copiar e-mail */
+.copiar-wrap{position:relative;display:inline-block;vertical-align:middle;margin-left:10px}
+.copiar{
+  font-family:var(--selo);font-weight:700;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--preto-fundo);color:var(--amarelo);
+  border:3px solid var(--preto-fundo);padding:6px 10px;cursor:pointer;
+  box-shadow:3px 3px 0 var(--rosa);
+}
+.copiar-tag{
+  position:absolute;left:0;top:0;height:100%;min-width:100%;box-sizing:border-box;white-space:nowrap;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--rosa);color:var(--preto-fundo);
+  border:3px solid var(--preto-fundo);box-shadow:3px 3px 0 var(--preto-fundo);
+  font-family:var(--selo);font-weight:700;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:0 10px;pointer-events:none;
+}
+.copiar-tag:empty{display:none}
+
+/* Link secundário de WhatsApp na chamada */
+.wpp-link{
+  display:block;width:max-content;max-width:100%;margin-top:14px;
+  font-family:var(--selo);font-weight:600;font-size:.8rem;letter-spacing:.04em;
+  color:var(--preto);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;
+}
+.wpp-link:hover{background:var(--preto-fundo);color:var(--amarelo)}
+
+/* Botão flutuante de WhatsApp */
+.wpp{
+  position:fixed;right:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);z-index:60;
+  width:58px;height:58px;display:grid;place-items:center;text-decoration:none;
+  background:var(--preto-fundo);border:3px solid var(--amarelo);
+  box-shadow:5px 5px 0 var(--rosa);
+}
+.wpp svg{width:30px;height:30px;display:block;fill:var(--amarelo)}
+.wpp:focus-visible{outline:0;box-shadow:0 0 0 3px var(--papel),0 0 0 6px var(--preto-fundo)}
+.wpp__tag{
+  position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);white-space:nowrap;
+  background:var(--amarelo);color:var(--preto-fundo);
+  border:3px solid var(--preto-fundo);box-shadow:4px 4px 0 var(--preto-fundo);
+  font-family:var(--selo);font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:8px 12px;opacity:0;visibility:hidden;pointer-events:none;
+}
+@media (hover:hover){.wpp:hover .wpp__tag,.wpp:focus-visible .wpp__tag{opacity:1;visibility:visible}}
+@media (max-width:640px){.wpp{width:52px;height:52px}.wpp svg{width:27px;height:27px}}
+
+/* Gatinho pousado na borda do rodapé */
+.rodape{overflow:visible}
+.gato{
+  position:absolute;z-index:2;top:0;
+  right:max(var(--pad),calc((100vw - var(--max)) / 2 + var(--pad)));
+  width:50px;height:auto;image-rendering:pixelated;
+  transform:translateY(calc(-100% - 4px));
+}
+
+/* Faixa divisória (opcional) */
+.faixa{background:var(--preto-fundo);color:var(--amarelo);overflow:hidden;white-space:nowrap}
+.faixa__trilho{display:flex;width:max-content}
+.faixa__grupo{display:flex;flex-shrink:0}
+.faixa__grupo span{
+  font-family:var(--selo);font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:10px 28px;
+}
+
+/* Cores/estados sem movimento (valem sempre) */
+@media (hover:hover){
+  .sec--suave .linha:hover{background:var(--papel);box-shadow:-18px 0 0 var(--papel),18px 0 0 var(--papel)}
+  .sec--suave .linha:hover .num{color:var(--preto-fundo);text-shadow:3px 3px 0 var(--rosa)}
+}
+.btn--vazio:hover{box-shadow:none}
+@media print{.wpp,.gato{display:none}.rv{opacity:1!important;transform:none!important}}
+
+/* ---------- MOVIMENTO (desligado com prefers-reduced-motion: reduce) ---------- */
+@media (prefers-reduced-motion:no-preference){
+
+  /* 1 · marca-texto riscando da esquerda para a direita */
+  .js-motion .mark{background-size:0 .8em;transition:background-size .75s cubic-bezier(.65,0,.25,1)}
+  .js-motion .mark.is-in{background-size:100% .8em}
+
+  /* 2 · faíscas: pulso seco ao entrar na tela */
+  .js-motion .deco--hero.is-in,.js-motion .deco--cases.is-in,.js-motion .deco--chamada.is-in{animation:pulso .5s steps(5) 1}
+  @keyframes pulso{0%{transform:scale(1)}40%{transform:scale(1.14)}100%{transform:scale(1)}}
+  /* coração: inclinada rápida */
+  @media (hover:hover){.arroba-bloco:hover .deco--insta{animation:inclina .42s steps(6) 1}}
+  @keyframes inclina{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}75%{transform:rotate(-3deg)}}
+
+  /* 3 · selo do hero: adesivo inclina no hover */
+  .hero__foto .selo{transition:transform .14s steps(3),box-shadow .14s steps(3)}
+  @media (hover:hover){.hero__foto:hover .selo{transform:rotate(-9deg) translate(-4px,-4px);box-shadow:9px 9px 0 var(--rosa)}}
+
+  /* 4 · hover de prensa/carimbo: levanta, e afunda ao clicar */
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--preto)}
+  .btn--preto:hover{box-shadow:8px 8px 0 var(--bsh,var(--amarelo))}
+  .btn--noturno:hover{box-shadow:8px 8px 0 var(--rosa)}
+  .btn--vazio:hover{transform:none;box-shadow:none}
+  .btn:active{transform:translate(6px,6px);box-shadow:0 0 0 var(--preto)}
+  .btn--preto:active{box-shadow:0 0 0 var(--bsh,var(--amarelo))}
+  .btn--noturno:active{box-shadow:0 0 0 var(--rosa)}
+  .btn--vazio:active{transform:translate(2px,2px)}
+
+  .case{transition:transform .12s ease,box-shadow .12s ease}
+  @media (hover:hover){.case:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--rosa)}}
+  .case:active{transform:translate(5px,5px);box-shadow:3px 3px 0 var(--rosa)}
+
+  .linha{transition:background-color .12s ease,box-shadow .12s ease}
+  .linha .num{transition:transform .12s ease}
+  @media (hover:hover){.sec--suave .linha:hover .num{transform:translate(-2px,-2px)}}
+
+  /* 5 · entrada em cascata */
+  .rv{opacity:0;transform:translateY(16px)}
+  .rv.is-in{opacity:1;transform:none;transition:opacity .3s ease,transform .3s steps(4);transition-delay:var(--d,0ms)}
+
+  /* 6 · copiar */
+  .copiar{transition:transform .1s ease,box-shadow .1s ease}
+
+  /* botão de WhatsApp: mesmo efeito de prensa */
+  .wpp{transition:transform .12s ease,box-shadow .12s ease}
+  .wpp:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--rosa)}
+  .wpp:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--rosa)}
+  .wpp__tag{transition:opacity .12s steps(2)}
+
+  /* 9 · gatinho: saltinho seco */
+  .gato{transition:transform .1s steps(2)}
+  .gato:hover{transform:translateY(calc(-100% - 8px))}
+
+  /* 7 · faixa */
+  .faixa__trilho{animation:faixa 32s linear infinite}
+  .faixa:hover .faixa__trilho{animation-play-state:paused}
+  @keyframes faixa{to{transform:translateX(-50%)}}
+}
+
+/* ---- #chamada: duas linhas organizadas + "Copiar" discreto ---- */
+#chamada .dir{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+#chamada .dir p{margin-bottom:6px}
+.chamada__acoes{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.chamada__acoes .btn{margin-right:8px}
+.chamada__acoes .wpp-link{margin-top:0;display:inline-block}
+.chamada__mail{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#chamada .chamada__mail .mail{margin-top:0}
+.chamada__mail .copiar-wrap{margin-left:0}
+.copiar{
+  background:transparent;color:var(--preto-fundo);
+  border:1.5px solid var(--preto-fundo);box-shadow:none;
+  padding:4px 10px;font-size:.75rem;
+}
+.copiar:hover{background:var(--preto-fundo);color:var(--amarelo)}
+.copiar:active{transform:none;box-shadow:none}
