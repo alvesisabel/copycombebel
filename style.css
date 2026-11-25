@@ -740,8 +740,15 @@ body,p,li,dd,label,input,select,textarea{font-family:'Space Grotesk',sans-serif}
   .wpp__tag{transition:opacity .12s steps(2)}
 
   /* 9 · gatinho: saltinho seco */
-  .gato{transition:transform .1s steps(2)}
-  .gato:hover{transform:translateY(calc(-100% - 8px))}
+  .gato{
+    left:max(var(--pad),calc((100vw - var(--max)) / 2 + var(--pad)));right:auto;
+    --run:calc(min(100vw,var(--max)) - 2 * var(--pad) - 100px);
+    animation:gato-pula .5s steps(1,end) infinite,gato-corre 26s linear infinite,gato-vira 26s steps(1,end) infinite;
+  }
+  .gato:hover{animation-play-state:paused}
+  @keyframes gato-pula{0%{transform:translateY(calc(-100% - 4px))}50%{transform:translateY(calc(-100% - 14px))}}
+  @keyframes gato-corre{0%,6%{translate:0 0}46%,54%{translate:var(--run) 0}94%,100%{translate:0 0}}
+  @keyframes gato-vira{0%{scale:1 1}46%{scale:-1 1}94%{scale:1 1}}
 
   /* 7 · faixa */
   .faixa__trilho{animation:faixa 32s linear infinite}
