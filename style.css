@@ -668,7 +668,7 @@ body,p,li,dd,label,input,select,textarea{font-family:'Space Grotesk',sans-serif}
 .rodape{overflow:visible}
 .gato{
   position:absolute;z-index:2;top:0;
-  right:max(var(--pad),calc((100vw - var(--max)) / 2 + var(--pad)));
+  right:max(84px,calc((100vw - var(--max)) / 2 + var(--pad)));
   width:50px;height:auto;image-rendering:pixelated;
   transform:translateY(calc(-100% - 4px));
 }
